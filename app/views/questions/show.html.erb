@@ -14,15 +14,15 @@
 <h3>Here are the answers that have been added so far:</h3>
 
 <ul>
-<%= questions.answers.each do |answer| %>
+<% @question.answers.each do |answer| %>
     <li>
-        <%= answer.response%>
-        <%= answer.name%>
+        <p><%= answer.response %></p>
+        <p><%= answer.name %></p>
     </li>
 
-</ul>
-
 <% end %>
+
+</ul>
 
 <% else %>
 

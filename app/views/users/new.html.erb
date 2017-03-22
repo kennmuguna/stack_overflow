@@ -1,0 +1,47 @@
+<h1>Stack Overflow Signup</h1>
+
+<div class="container">
+
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </user>
+    <% end %>
+
+  <div class="container">
+      <div class="field">
+        
+          <%= f.label :email %> 
+          <%= f.text_field :email, class:"form-control input-lg", placeholder:"Email", tabindex:"1"%> <br>
+        
+      </div>
+
+      <div class="field">
+        
+          <%= f.label :password %>
+          <%= f.password_field :password, class:"form-control input-lg", placeholder:"Password", tabindex:"2" %> <br>
+      
+      </div>
+
+      <div class="field">
+        
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class:"form-control input-lg", placeholder:"Confirm password", tabindex:"3" %> <br>
+        
+      </div>
+
+      <div class="actions">
+        
+          <%= f.submit class:"btn btn-success text-center"%>
+        
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -2,13 +2,21 @@
 <html>
   <head>
     <title>StackOverflow</title>
-    <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+
+  <div class="container">
+
+  <div id="user_header">
+  <p align="right"><%= link_to "Sign Up", new_user_path %></p>
+  </div>
+
+  </div>
     <%= yield %>
   </body>
 </html>
